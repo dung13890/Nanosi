@@ -11,11 +11,14 @@
   },
   "devDependencies": {
     "axios": "^0.15.3",
+    "bourbon": "^4.3.3",
+    "bourbon-neat": "^2.0.0",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
+    "del": "^2.2.2",
     "jquery": "^3.1.1",
+    "vue": "^2.1.10",
     "laravel-mix": "0.*",
-    "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "lodash": "^4.17.4"
   }
 }
