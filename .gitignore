@@ -1,0 +1,16 @@
+/node_modules
+/public/hot
+/public/storage
+/public/assets
+/public/vendor
+/storage/*.key
+/storage/files
+/storage/debugbar
+/resources/assets/bower
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
