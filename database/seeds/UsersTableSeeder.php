@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
             app(User::class)->find(1)->update([
                 'name' => 'system',
                 'username' => 'system',
+                'password' => 'secret',
                 'email' => 'system@example.com',
             ]);
 
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'admin',
                 'username' => 'admin',
                 'email' => 'admin@example.com',
+                'password' => 'secret',
             ]);
         }
     }

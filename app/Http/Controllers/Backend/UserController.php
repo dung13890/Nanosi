@@ -10,7 +10,7 @@ use App\Jobs\User\DeleteJob;
 
 class UserController extends BackendController
 {
-    protected $dataSelect = ['id', 'name', 'username', 'email'];
+    protected $dataSelect = ['id', 'name', 'username', 'email', 'locked'];
 
     public function __construct(UserRepository $user)
     {

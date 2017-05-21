@@ -33,6 +33,7 @@ class UpdateJob
     public function handle()
     {
         $data = array_only($this->attributes, $this->item->getFillable());
+        $data['locked'] = $data['locked'] ?? false;
 
         $this->item->update($data);
     }
