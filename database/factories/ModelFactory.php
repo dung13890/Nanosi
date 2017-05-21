@@ -19,7 +19,8 @@ $factory->define(App\Eloquent\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'username' => $faker->unique()->userName,
         'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = 'secret',
+        'password' => $password ?: $password = str_random(10),
         'remember_token' => str_random(10),
+        'locked' => rand(0,1),
     ];
 });

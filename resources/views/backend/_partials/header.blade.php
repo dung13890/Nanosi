@@ -1,7 +1,7 @@
 <header class="main-header">
     <a href="/backend" class="logo">
-        <span class="logo-mini"><b>D</b></span>
-        <span class="logo-lg"><b>Application</b> Blog</span>
+        <span class="logo-mini"><b>N</b></span>
+        <span class="logo-lg"><b>Nanosi</b></span>
     </a>
 
     <nav class="navbar navbar-static-top">

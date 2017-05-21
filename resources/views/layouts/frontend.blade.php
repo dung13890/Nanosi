@@ -18,6 +18,7 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         {{ HTML::style('vendor/bootstrap/css/bootstrap.min.css') }}
         {{ HTML::style(mix('assets/css/frontend/app.css')) }}
+        @stack('prestyles')
     </head>
     <body>
         <div class="container">

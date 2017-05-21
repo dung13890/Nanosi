@@ -1,4 +1,6 @@
-# About Nanosi v5.4.x
+# About Nanosi
+
+[![Build Status](https://api.travis-ci.org/dung13890/Nanosi.svg)](https://travis-ci.org/dung13890/Nanosi)
 
 ## Required
 
