@@ -1,6 +1,10 @@
 var plugins = {
   bower: [
     {
+      in: 'AdminLTE/dist',
+      out: 'adminlte'
+    },
+    {
       in: 'bootstrap/dist',
       out: 'bootstrap'
     },
@@ -29,8 +33,20 @@ var plugins = {
       out: 'datatables-bs/js'
     },
     {
+      in: 'jasny-bootstrap/dist',
+      out: 'jasny-bootstrap'
+    },
+    {
       in: 'summernote/dist',
       out: 'summernote'
+    },
+    {
+      in: 'jqTree/tree.jquery.js',
+      out: 'jqtree/js'
+    },
+    {
+      in: 'jqTree/jqtree.css',
+      out: 'jqtree/css'
     }
   ],
   sass: [

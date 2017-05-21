@@ -1,0 +1,8 @@
+{
+  "/mix.js": "/mix.js",
+  "/assets/css/backend/app.css": "/assets/css/backend/app.css",
+  "/assets/css/frontend/app.css": "/assets/css/frontend/app.css",
+  "/assets/js/backend/app.js": "/assets/js/backend/app.js",
+  "/assets/js/frontend/app.js": "/assets/js/frontend/app.js",
+  "/assets/css/backend/plugins.css": "/assets/css/backend/plugins.css"
+}
