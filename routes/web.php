@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => '/', 'namespace' => 'Frontend'], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+});
+
+Route::group(['namespace' => 'Backend'], function () {
+    Auth::routes();
+    Route::group(['prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth']], function () {
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::resource('user', 'UserController');
+    });
 });
