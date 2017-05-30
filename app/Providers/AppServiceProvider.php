@@ -69,6 +69,11 @@ class AppServiceProvider extends ServiceProvider
             return UrlBuilderFactory::create(null, env('GLIDE_SIGNKEY'));
         });
 
+        $this->app->bind(
+            \App\Contracts\Services\MediaInterface::class,
+            \App\Services\MediaService::class
+        );
+
         $this->composers();
     }
 
