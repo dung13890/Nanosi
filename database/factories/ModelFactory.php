@@ -24,3 +24,34 @@ $factory->define(App\Eloquent\User::class, function (Faker\Generator $faker) {
         'locked' => rand(0,1),
     ];
 });
+
+$factory->define(App\Eloquent\Category::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(4, false),
+        'type' => $faker->randomElement(config('settings.category_type')),
+        'description' => $faker->text,
+        'image' => '2017/06/backend/1/category/no_image.jpg',
+        'locked' => rand(0, 1),
+    ];
+});
+
+$factory->define(App\Eloquent\Post::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(5, false),
+        'description' => $faker->text,
+        'content' => $faker->paragraph(15, true),
+        'user_id' => 1,
+        'featured' => rand(0, 1),
+        'locked' => rand(0, 1),
+        'image' => '2017/06/backend/1/post/no_image.jpg',
+    ];
+});
+
+$factory->define(App\Eloquent\Page::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(5, false),
+        'description' => $faker->text,
+        'content' => $faker->paragraph(15, true),
+        'locked' => rand(0, 1),
+    ];
+});

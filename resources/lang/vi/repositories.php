@@ -25,6 +25,10 @@ return [
     'successfully' => 'Successfully',
     'unsuccessfully' => 'Unsuccessfully',
 
+    'image' => 'Image',
     'user' => 'User',
+    'page' => 'Page',
+    'post' => 'Post',
+    'category' => 'Category',
 
 ];

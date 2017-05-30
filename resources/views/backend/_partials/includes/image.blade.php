@@ -16,7 +16,7 @@
         <div class="btn btn-default btn-file">
             <span class="fileinput-new">Select image</span>
             <span class="fileinput-exists">Change</span>
-            {{ Form::file($image_name) }}
+            {{ Form::file($imageName) }}
         </div>
     </div>
 </div>

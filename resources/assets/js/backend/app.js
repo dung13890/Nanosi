@@ -152,5 +152,28 @@ var CRUD = (function () {
     }
   }
 
+  CRUD.prototype.sendImage = function(file, url, $element, callback) {
+    var callback = callback || null;
+    var  data = new FormData();
+    data.append("image", file);
+    _$.ajax({
+      data: data,
+      type: "POST",
+      url: url,
+      cache: false,
+      contentType: false,
+      processData: false,
+      success: function(data) {
+        $element.summernote("insertImage", data.url);
+      },
+      error: function(xhr, textStatus, error) {
+        alert('Đã có lỗi xảy ra..! Kiểm tra lại file ảnh của bạn.');
+      }
+    });
+    if (callback) {
+      callback.apply(this);
+    }
+  }
+
   return CRUD;
 })();

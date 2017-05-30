@@ -73,6 +73,7 @@ abstract class BackendController extends AbstractController
             $this->e['message'] = __("repositories.successfully");
             DB::commit();
         } catch (Exception $e) {
+            \Log::info($e);
             DB::rollBack();
             $this->e['code'] = 100;
             $this->e['message'] = __("repositories.unsuccessfully");
