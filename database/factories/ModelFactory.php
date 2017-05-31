@@ -47,6 +47,25 @@ $factory->define(App\Eloquent\Post::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Eloquent\Product::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->sentence(5, false),
+        'code' => $faker->ean8,
+        'size' => $faker->name,
+        'material' => $faker->name,
+        'origin' => $faker->company,
+        'price' => $faker->randomNumber(6),
+        'description' => $faker->text,
+        'properties' => $faker->text,
+        'guide' => $faker->text,
+        'content' => $faker->paragraph(15, true),
+        'user_id' => 1,
+        'featured' => rand(0, 1),
+        'locked' => rand(0, 1),
+        'image' => '2017/06/backend/1/product/no_image.jpg',
+    ];
+});
+
 $factory->define(App\Eloquent\Page::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->sentence(5, false),

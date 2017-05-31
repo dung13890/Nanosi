@@ -1,5 +1,9 @@
 var config = {
   plugins: {
+    vue: {
+      in: 'resources/assets/vue',
+      out: 'public/assets/vue'
+    },
     scripts: {
       in: 'resources/assets/js',
       out: 'public/assets/js'

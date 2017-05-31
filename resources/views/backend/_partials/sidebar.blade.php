@@ -26,6 +26,11 @@
                     <i class="fa fa-book"></i> <span>{{ __('repositories.post') }}</span>
                 </a>
             </li>
+            <li @if (Request::is('backend/product*')) class="active" @endif">
+                <a href="{{ route('backend.product.index') }}">
+                    <i class="fa fa-cube"></i> <span>{{ __('repositories.product') }}</span>
+                </a>
+            </li>
             <li class="header">System</li>
             <li @if (Request::is('backend/user*')) class="active" @endif">
                 <a href="{{ route('backend.user.index') }}">

@@ -31,5 +31,7 @@ Route::group(['namespace' => 'Backend'], function () {
         Route::resource('user', 'UserController');
         Route::resource('page', 'PageController');
         Route::resource('post', 'PostController');
+        Route::resource('product', 'ProductController');
+        Route::post('product/image/store', 'ProductController@imageStore')->name('product.image.store');
     });
 });
