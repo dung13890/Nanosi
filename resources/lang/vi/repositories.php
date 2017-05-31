@@ -30,5 +30,6 @@ return [
     'page' => 'Page',
     'post' => 'Post',
     'category' => 'Category',
+    'product' => 'Product',
 
 ];

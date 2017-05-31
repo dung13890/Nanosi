@@ -16,11 +16,11 @@ var config = require('./npm/config');
  | file for the application as well as bundling up all the JS files.
  |
  */
-// del(config.plugins.bower.out);
-// del(config.plugins.scripts.out);
-// del(config.plugins.img.out);
-// del(config.plugins.sass.out);
-// del(config.plugins.styles.out);
+del(config.plugins.bower.out);
+del(config.plugins.scripts.out);
+del(config.plugins.img.out);
+del(config.plugins.sass.out);
+del(config.plugins.styles.out);
 
 /*
  | Copy image to public
@@ -34,6 +34,12 @@ mix.copy(config.plugins.img.in, config.plugins.img.out, false);
 plugins.bower.map(function (bower) {
   mix.copy(path.join(config.plugins.bower.in, bower.in), path.join(config.plugins.bower.out, bower.out), false);
 });
+
+/*
+ | Compiling Vue to public
+ */
+mix.js(path.join(config.plugins.vue.in, 'backend/dropzone.js'), path.join(config.plugins.vue.out, 'backend/dropzone.js'))
+   .extract(['vue'])
 
 /*
  | Compiling Scripts Backend to public
@@ -84,7 +90,7 @@ plugins.sass.map(function (sass) {
  |
  */
 
-
+mix.browserSync('nanosi.dev');
 
 if (mix.config.inProduction) {
   mix.version();

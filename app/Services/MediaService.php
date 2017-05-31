@@ -22,7 +22,7 @@ class MediaService implements MediaInterface
         } catch (SignatureException $e) {
             \Log::error($e);
 
-            return redirect(asset('assets/images/no_image.jpg'));
+            return redirect(asset('assets/backend/images/no_image.jpg'));
         }
     }
 

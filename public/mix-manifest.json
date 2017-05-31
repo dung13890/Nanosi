@@ -1,7 +1,10 @@
 {
-  "/mix.js": "/mix.js",
+  "/assets/vue/backend/dropzone.js": "/assets/vue/backend/dropzone.js",
   "/assets/css/backend/app.css": "/assets/css/backend/app.css",
+  "/assets/css/backend/dropzone.css": "/assets/css/backend/dropzone.css",
   "/assets/css/frontend/app.css": "/assets/css/frontend/app.css",
+  "/assets/vue/backend/vendor.js": "/assets/vue/backend/vendor.js",
+  "/assets/vue/backend/manifest.js": "/assets/vue/backend/manifest.js",
   "/assets/js/backend/app.js": "/assets/js/backend/app.js",
   "/assets/js/frontend/app.js": "/assets/js/frontend/app.js",
   "/assets/css/backend/plugins.css": "/assets/css/backend/plugins.css"

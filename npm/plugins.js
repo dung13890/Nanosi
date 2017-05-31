@@ -55,6 +55,10 @@ var plugins = {
       out: 'backend/app.css'
     },
     {
+      in: 'backend/dropzone.scss',
+      out: 'backend/dropzone.css'
+    },
+    {
       in: 'frontend/app.scss',
       out: 'frontend/app.css'
     }

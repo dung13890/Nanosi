@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Jobs\Post;
+namespace App\Jobs\Product;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Foundation\Bus\Dispatchable;
 use App\Traits\Jobs\UploadableTrait;
-use App\Eloquent\Post;
+use App\Eloquent\Product;
 
 class DeleteJob
 {
@@ -18,7 +18,7 @@ class DeleteJob
      * @return void
      */
 
-    public function __construct(Post $item)
+    public function __construct(Product $item)
     {
         $this->item = $item;
     }
@@ -35,6 +35,7 @@ class DeleteJob
         }
         
         $this->item->seo()->delete();
+        $this->item->images()->delete();
         $this->item->delete();
     }
 }
