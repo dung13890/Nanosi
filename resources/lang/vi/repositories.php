@@ -24,6 +24,7 @@ return [
 
     'successfully' => 'Successfully',
     'unsuccessfully' => 'Unsuccessfully',
+    'permissions' => 'Not Permissions',
 
     'image' => 'Image',
     'user' => 'User',

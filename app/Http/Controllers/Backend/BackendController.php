@@ -67,10 +67,10 @@ abstract class BackendController extends AbstractController
     {
         DB::beginTransaction();
         try {
+            $this->e['message'] = __("repositories.successfully");
             if (is_callable($callback)) {
                 call_user_func_array($callback, []);
             }
-            $this->e['message'] = __("repositories.successfully");
             DB::commit();
         } catch (Exception $e) {
             \Log::info($e);

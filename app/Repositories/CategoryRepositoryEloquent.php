@@ -12,10 +12,15 @@ class CategoryRepositoryEloquent extends AbstractRepositoryEloquent implements C
 
     protected $rules = [
         'store' => [
-            
+            'name' => "required|min:2|max:255",
+            'locked' => 'sometimes|boolean',
+            'banner'=> 'image|mimes:jpeg,jpg,gif,bmp,png|max:1200',
+            'type' => "required|in:product,post",
         ],
         'update' => [
-            
+            'name' => "required|min:2|max:255",
+            'locked' => 'sometimes|boolean',
+            'banner'=> 'image|mimes:jpeg,jpg,gif,bmp,png|max:1200', 
         ],
     ];
     

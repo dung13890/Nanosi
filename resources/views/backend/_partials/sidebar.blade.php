@@ -21,15 +21,23 @@
                     <i class="fa fa-file-text-o"></i> <span>{{ __('repositories.page') }}</span>
                 </a>
             </li>
-            <li @if (Request::is('backend/post*')) class="active" @endif">
-                <a href="{{ route('backend.post.index') }}">
-                    <i class="fa fa-book"></i> <span>{{ __('repositories.post') }}</span>
+            <li class="treeview @if (Request::is('backend/post*') || Request::is('backend/category/type/post*')) active @endif">
+                <a href="#">
+                    <i class="fa fa-book"></i> <span>{{ __('repositories.post') }}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
+                <ul class="treeview-menu">
+                    <li @if (Request::is('backend/category/type/post*')) class="active" @endif><a href="{{ route('backend.category.type','post') }}"><i class="fa fa-circle-o"></i> {{ __('repositories.category') }}</a></li>
+                    <li @if (Request::is('backend/post*')) class="active" @endif><a href="{{ route('backend.post.index') }}"><i class="fa fa-circle-o"></i> {{ __('repositories.post') }}</a></li>
+                </ul>
             </li>
-            <li @if (Request::is('backend/product*')) class="active" @endif">
-                <a href="{{ route('backend.product.index') }}">
-                    <i class="fa fa-cube"></i> <span>{{ __('repositories.product') }}</span>
+            <li class="treeview @if (Request::is('backend/product*') || Request::is('backend/category/type/product*')) active @endif">
+                <a href="#">
+                    <i class="fa fa-cube"></i> <span>{{ __('repositories.product') }}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
+                <ul class="treeview-menu">
+                    <li @if (Request::is('backend/category/type/product*')) class="active" @endif><a href="{{ route('backend.category.type','product') }}"><i class="fa fa-circle-o"></i> {{ __('repositories.category') }}</a></li>
+                    <li @if (Request::is('backend/product*')) class="active" @endif><a href="{{ route('backend.product.index') }}"><i class="fa fa-circle-o"></i> {{ __('repositories.product') }}</a></li>
+                </ul>
             </li>
             <li class="header">System</li>
             <li @if (Request::is('backend/user*')) class="active" @endif">
@@ -38,6 +46,5 @@
                 </a>
             </li>
         </ul>
-        
     </section>
 </aside>

@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Contracts\Services\MediaInterface;
 
-class DashboardController extends Controller
+class DashboardController extends BackendController
 {
-    public function index()
+    public function index(Request $request)
     {
         $this->view = 'dashboard.index';
-        $this->compacts['heading'] = $this->trans('dashboard');
+        $this->compacts['heading'] = __('repositories.dashboard');
 
         return $this->viewRender();
     }
