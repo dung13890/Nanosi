@@ -34,6 +34,35 @@
   height:60px;
 }
 
+.block-style {
+  ul.jqtree-tree {
+    .jqtree-element {
+      .jqtree-title {
+          margin-left: 0;
+          color: #3c8dbc;
+          font-weight: 600;
+      }
+      .tools {
+        display:none;
+      }
+      margin-bottom: 8px;
+        background: #f4f4f4;
+        border: 1px solid #d2d6de;
+        padding: 8px;
+    }
+    li.jqtree_common:hover {
+      > .jqtree-element {
+        >.tools {
+          display:inline-block;
+        }
+      }
+    }
+    ul.jqtree_common {
+      margin-left: 1em;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .table-responsive {
     border:none;

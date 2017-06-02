@@ -2,8 +2,12 @@
 
 namespace App\Eloquent;
 
+use App\Traits\GetImageTrait;
+
 class Category extends Abstracts\Sluggable
 {
+    use GetImageTrait;
+
     protected $fillable = [
         'name', 'parent_id', 'type', 'description', 'locked', 'image'
     ];

@@ -175,5 +175,58 @@ var CRUD = (function () {
     }
   }
 
+  CRUD.prototype.treeInit = function (items, options, drag, selector) {
+    var items = items || [];
+    var options = options || {};
+    var drag = drag || false;
+    var selector = selector || '#list';
+    var defaultOptions = {
+      closedIcon: $('<i class="fa fa-plus"></i>'),
+      openedIcon: $('<i class="fa fa-minus"></i>'),
+      data: items,
+      dragAndDrop:drag,
+      autoOpen: false,
+      selectable: false,
+    };
+    options = $.extend(defaultOptions, options);
+    $(selector).tree(options);
+
+    _$(document).on('click', 'a.delete-action', function(event) {
+      var $ = _$;
+      event.preventDefault();
+      var $this = $(this);
+      var href = $this.attr('href');
+
+      var callback = function () {
+        _$.post(href, {_method: 'DELETE'}, function() {})
+        .done(function (data) {
+          toastr.success(data.message);
+          $this.closest('li').fadeOut(400, function() {
+            $this.remove();
+          });
+        })
+        .fail(function(xhr) {
+          console.log(xhr);
+          if (xhr && xhr.responseJSON) {
+            return toastr.error(xhr.responseJSON.message);
+          }
+
+          return toastr.error('An error has occurred');
+        });
+      }
+
+      swal({
+        title: "Are you sure?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Ok!",
+        cancelButtonText: "Cancel",
+      }, function() {
+        return callback();
+      });
+    });
+  }
+
   return CRUD;
 })();

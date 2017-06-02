@@ -33,5 +33,9 @@ Route::group(['namespace' => 'Backend'], function () {
         Route::resource('post', 'PostController');
         Route::resource('product', 'ProductController');
         Route::post('product/image/store', 'ProductController@imageStore')->name('product.image.store');
+        Route::resource('category', 'CategoryController', [
+            'except' => ['index', 'create', 'show']
+        ]);
+        Route::get('category/type/{type}', 'CategoryController@type')->name('category.type');
     });
 });
