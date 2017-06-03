@@ -31,13 +31,21 @@ class CategoryRepositoryEloquent extends AbstractRepositoryEloquent implements C
 
     public function getDataByType($type, $columns = ['*'])
     {
-        return $this->model()->where('type', $type)->get($columns);
+        return $this->model()->where(function ($query) use ($type) {
+            if ($type) {
+                $query->where('type', $type);
+            }
+        })->get($columns);
     }
 
     public function getRootByType($type, $columns = ['*'])
     {
         return $this->model()->with(['children' => function ($query) use ($columns) {
             $query->select($columns);
-        }])->where('parent_id', 0)->where('type', $type)->get($columns);
+        }])->where('parent_id', 0)->where(function ($query) use ($type) {
+            if ($type) {
+                $query->where('type', $type);
+            }
+        })->get($columns);
     }
 }

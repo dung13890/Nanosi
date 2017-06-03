@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-md-6">
             @component('backend._partials.components.box', [
-                'box_title' => $action ?: __('repositories.create'),
+                'box_title' => $action ?? __('repositories.create'),
                 'box_class' => 'animated fadeInUp'
             ])
             @slot('box_fields')

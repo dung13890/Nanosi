@@ -43,8 +43,8 @@ class ProductRepositoryEloquent extends AbstractRepositoryEloquent implements Pr
         return new Product;
     }
 
-    public function getData($params = [], $columns = ['*'])
+    public function getData($columns = ['*'])
     {
-        return $this->model()->all($columns);
+        return $this->model()->where('locked', true)->get($columns);
     }
 }

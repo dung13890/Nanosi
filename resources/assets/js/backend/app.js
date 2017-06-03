@@ -167,7 +167,7 @@ var CRUD = (function () {
         $element.summernote("insertImage", data.url);
       },
       error: function(xhr, textStatus, error) {
-        alert('Đã có lỗi xảy ra..! Kiểm tra lại file ảnh của bạn.');
+        toastr.error(xhr.responseJSON.message);
       }
     });
     if (callback) {
