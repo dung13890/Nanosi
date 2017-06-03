@@ -36,8 +36,8 @@ class PostRepositoryEloquent extends AbstractRepositoryEloquent implements PostR
         return new Post;
     }
 
-    public function getData($params = [], $columns = ['*'])
+    public function getData($columns = ['*'])
     {
-        return $this->model()->all($columns);
+        return $this->model()->where('locked', true)->get($columns);
     }
 }

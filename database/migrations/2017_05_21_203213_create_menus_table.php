@@ -13,11 +13,13 @@ class CreateMenusTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 50)->unique();
-            $table->integer('parent_id')->index();
+            $table->string('name', 50);
+            $table->integer('parent_id')->default(0)->index();
             $table->integer('sort')->default(0);
+            $table->nullableMorphs('menuable');
             $table->string('url');
             $table->timestamps();
         });

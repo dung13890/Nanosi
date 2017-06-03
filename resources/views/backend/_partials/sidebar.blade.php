@@ -45,6 +45,11 @@
                     <i class="fa fa-user"></i> <span>{{ __('repositories.user') }}</span>
                 </a>
             </li>
+            <li @if (Request::is('backend/menu*')) class="active" @endif">
+                <a href="{{ route('backend.menu.index') }}">
+                    <i class="fa fa-list-ul"></i> <span>{{ __('repositories.menu') }}</span>
+                </a>
+            </li>
         </ul>
     </section>
 </aside>

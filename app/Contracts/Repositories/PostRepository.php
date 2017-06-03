@@ -6,5 +6,5 @@ use App\Contracts\Traits\ValidatableInterface;
 
 interface PostRepository extends ValidatableInterface
 {
-    public function getData($params = [], $columns = ['*']);
+    public function getData($columns = ['*']);
 }

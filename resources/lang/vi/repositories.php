@@ -20,6 +20,7 @@ return [
     'save' => 'Save',
     'search' => 'Search',
     'reset' => 'Reset',
+    'link' => 'Link',
     'dashboard' => 'Dashboard',
 
     'successfully' => 'Successfully',
@@ -32,5 +33,6 @@ return [
     'post' => 'Post',
     'category' => 'Category',
     'product' => 'Product',
+    'menu' => 'Menu',
 
 ];

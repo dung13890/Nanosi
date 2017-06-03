@@ -20,6 +20,8 @@ Route::get('image/{path}', ['as' => 'image' , function (Request $request, MediaI
 
 Route::group(['prefix' => '/', 'namespace' => 'Frontend'], function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('category/{slug}', 'CategoryController@show')->name('category.show');
+    Route::get('page/{slug}', 'PageController@show')->name('page.show');
 });
 
 Route::group(['namespace' => 'Backend'], function () {
@@ -34,8 +36,12 @@ Route::group(['namespace' => 'Backend'], function () {
         Route::resource('product', 'ProductController');
         Route::post('product/image/store', 'ProductController@imageStore')->name('product.image.store');
         Route::resource('category', 'CategoryController', [
-            'except' => ['index', 'create', 'show']
+            'except' => ['index', 'create', 'show', 'create']
         ]);
         Route::get('category/type/{type}', 'CategoryController@type')->name('category.type');
+        Route::resource('menu', 'MenuController', [
+            'execpt' => ['create', 'edit', 'show', 'create']
+        ]);
+        Route::POST('menu/serialize', 'MenuController@serialize')->name('menu.serialize');
     });
 });

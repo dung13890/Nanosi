@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs\Product;
+namespace App\Jobs\Media;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Foundation\Bus\Dispatchable;

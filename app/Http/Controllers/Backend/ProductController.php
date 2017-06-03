@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Jobs\Product\StoreJob;
 use App\Jobs\Product\UpdateJob;
 use App\Jobs\Product\DeleteJob;
-use App\Jobs\Product\ImageStoreJob;
+use App\Jobs\Media\ImageStoreJob;
 
 class ProductController extends BackendController
 {
@@ -115,6 +115,12 @@ class ProductController extends BackendController
         $this->validate($request, $this->repository->validation('imageStore'));
         $data = $request->only('name', 'src', 'size', 'type');
 
-        return $this->dispatch(new ImageStoreJob($data));
+        try {
+            $result = $this->dispatch(new ImageStoreJob($data));
+        } catch (\Exception $e) {
+            return response()->json(__("repositories.unsuccessfully"), 402);
+        }
+
+        return $result;
     }
 }
