@@ -7,4 +7,6 @@ use App\Contracts\Traits\ValidatableInterface;
 interface ProductRepository extends ValidatableInterface
 {
     public function getData($columns = ['*']);
+
+    public function findBySlug($slug);
 }

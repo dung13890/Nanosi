@@ -59,6 +59,11 @@ mix.scripts([
  */
 mix.scripts([
   path.join(config.plugins.scripts.in, 'laroute.js'),
+  path.join(config.plugins.scripts.in, '../bower/bootstrap/dist/js/bootstrap.min.js'),
+  path.join(config.plugins.scripts.in, '../bower/owl.carousel/dist/owl.carousel.min.js'),
+  path.join(config.plugins.scripts.in, '../bower/parallax.js/parallax.min.js'),
+  path.join(config.plugins.scripts.in, 'frontend/plugin.js'),
+  path.join(config.plugins.scripts.in, 'frontend/royal_preloader.min.js'),
   path.join(config.plugins.scripts.in, 'frontend/app.js'),
 ], path.join(config.plugins.scripts.out, 'frontend/app.js'));
 
@@ -76,6 +81,11 @@ mix.styles([
  | Styles plugins Frontend
  |
  */
+ mix.styles([
+   path.join(config.plugins.styles.in, '../bower/owl.carousel/dist/assets/owl.carousel.min.css'),
+   path.join(config.plugins.styles.in, '../bower/owl.carousel/dist/assets/owl.theme.default.min.css'),
+   path.join(config.plugins.styles.in, 'animate.css/animate.min.css'),
+ ], path.join(config.plugins.styles.out, 'frontend/plugins.css'));
 
 /*
  |  Compiling Sass Backend to public

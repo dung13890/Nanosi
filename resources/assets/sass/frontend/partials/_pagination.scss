@@ -1,0 +1,49 @@
+.pagination-wrap {
+    text-align: center;
+    .pagination {
+        margin: 30px auto 10px;
+    }
+}
+
+.pagination {
+    >li {
+        display: inline-block;
+        margin: 0 2px;
+        >a,
+        >span {
+            position: relative;
+            float: left;
+            margin-left: 0;
+            color: $color_primary;
+            border: 1px solid #eee;
+            background-color: #eee;
+        }
+
+        &:first-child {
+            >a,
+            >span {
+                margin-left: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        &:last-child {
+            >a,
+            >span {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    >.active>a,
+    >li>a:hover,
+    >li>span:hover,
+    >li>a:focus,
+    >li>span:focus {
+        color: #fff;
+        border-color: $color_primary;
+        background-color: $color_primary;
+    }
+}

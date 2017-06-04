@@ -20,10 +20,10 @@ class CategoryRepositoryEloquent extends AbstractRepositoryEloquent implements C
         'update' => [
             'name' => "required|min:2|max:255",
             'locked' => 'sometimes|boolean',
-            'banner'=> 'image|mimes:jpeg,jpg,gif,bmp,png|max:1200', 
+            'banner'=> 'image|mimes:jpeg,jpg,gif,bmp,png|max:1200',
         ],
     ];
-    
+
     public function model()
     {
         return new Category;
@@ -47,5 +47,9 @@ class CategoryRepositoryEloquent extends AbstractRepositoryEloquent implements C
                 $query->where('type', $type);
             }
         })->get($columns);
+    }
+
+    public function findBySlug($slug) {
+        return $this->model()->findBySlug($slug);
     }
 }

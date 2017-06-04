@@ -1,0 +1,134 @@
+footer {
+    background-color: #242d31;
+    .footer-main {
+        padding: 10px 0;
+    }
+}
+
+.logofooter {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+.footerleft {
+    margin-top: 50px;
+    padding: 0 36px;
+    p {
+        font-size: 12px !important;
+        margin-bottom: 15px;
+        color: #fff;
+        i {
+            width: 20px;
+            color: #999;
+        }
+    }
+}
+
+.paddingtop-bottom {
+    margin-top: 50px;
+}
+
+.footer-ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 2px;
+    li {
+        font-size: 12px;
+        line-height: 29px;
+        a {
+            color: #a0a3a4;
+            transition: color 0.2s linear 0s, background 0.2s linear 0s;
+            &:hover {
+                color: #ff670f;
+                transition: color 0.2s linear 0s, background 0.2s linear 0s;
+            }
+        }
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.icon-ul {
+    list-style-type: none !important;
+    margin: 0px;
+    padding: 0px;
+    li {
+        line-height: 75px;
+        width: 100%;
+        float: left;
+    }
+}
+
+.icon {
+    float: left;
+    margin-right: 5px;
+}
+
+.copyright {
+    min-height: 40px;
+    background-color: #111;
+    p {
+        text-align: left;
+        color: #fff;
+        padding: 10px 0;
+        margin-bottom: 0px;
+    }
+}
+
+.heading7 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+.post {
+    p {
+        font-size: 12px;
+        color: #fff;
+        line-height: 20px;
+        span {
+            display: block;
+            color: #8f8f8f;
+        }
+    }
+}
+
+.bottom_ul {
+    list-style-type: none;
+    float: right;
+    margin-bottom: 0px;
+    li {
+        float: left;
+        line-height: 40px;
+        &:after {
+            content: "/";
+            color: #fff;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+
+        a {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+
+.qr-code {
+    max-width: 130px;
+    margin-top: 30px;
+}
+
+.social {
+    &.social-footer {
+        &.footer {
+            float: right;
+            margin-top: 7px;
+        }
+    }
+}

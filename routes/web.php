@@ -20,7 +20,8 @@ Route::get('image/{path}', ['as' => 'image' , function (Request $request, MediaI
 
 Route::group(['prefix' => '/', 'namespace' => 'Frontend'], function () {
     Route::get('/', 'HomeController@index')->name('home');
-    Route::get('category/{slug}', 'CategoryController@show')->name('category.show');
+    Route::get('category/{slug}', 'CategoryController@show')->name('shop.category');
+    Route::get('product/{slug}', 'ProductController@show')->name('shop.product');
     Route::get('page/{slug}', 'PageController@show')->name('page.show');
 });
 
@@ -29,7 +30,7 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::group(['prefix' => 'backend', 'as' => 'backend.', 'middleware' => ['auth']], function () {
         Route::get('/', 'DashboardController@index')->name('dashboard');
         Route::post('summernote/image', 'DashboardController@summernoteImage')->name('summernote.image');
-        
+
         Route::resource('user', 'UserController');
         Route::resource('page', 'PageController');
         Route::resource('post', 'PostController');

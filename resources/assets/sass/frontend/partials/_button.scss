@@ -1,0 +1,105 @@
+.btn {
+    font-family: "Playfair Display", serif;
+    border-radius: 1px;
+    font-weight: 600;
+    border-width: 0;
+    padding: 8px 25px;
+    -webkit-transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+        transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+    &.btn-next-tab {
+        font-size: 16px;
+        padding: 10px 35px;
+    }
+}
+
+.btn-dark {
+    color: #fff;
+    border-color: $color_primary;
+    background-color: $color_primary;
+    &:hover {
+        color: #fff;
+        border-color: #264251;
+        background-color: #264251;
+    }
+}
+
+.btn-main {
+    color: #fff;
+    border-color: $color_primary;
+    background-color: $color_primary;
+    &:hover {
+        color: #fff;
+        border-color: #eec341;
+        background-color: #eec341;
+    }
+}
+
+.btn-dark-main {
+    color: #fff;
+    border-color: $color_primary;
+    background-color: $color_primary;
+    &:hover {
+        color: #fff;
+        border-color: $color_primary;
+        background-color: $color_primary;
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    border-color: #3b95e8;
+    background-color: #3b95e8;
+    &:hover {
+        color: #fff;
+        border-color: #69aeed;
+        background-color: #69aeed;
+    }
+}
+
+.btn-success {
+    color: #fff;
+    border-color: #40c640;
+    background-color: #40c640;
+    &:hover {
+        color: #fff;
+        border-color: #67d267;
+        background-color: #67d267;
+    }
+}
+
+.btn-warning {
+    color: #fff;
+    border-color: #f6a430;
+    background-color: #f6a430;
+    &:hover {
+        color: #fff;
+        border-color: #f8b961;
+        background-color: #f8b961;
+    }
+}
+
+.btn-info {
+    color: #fff;
+    border-color: #2ebfea;
+    background-color: #2ebfea;
+    &:hover {
+        color: #fff;
+        border-color: #5ccdef;
+        background-color: #5ccdef;
+    }
+}
+
+.btn-danger {
+    color: #fff;
+    border-color: #f23a34;
+    background-color: #f23a34;
+    &:hover {
+        color: #fff;
+        border-color: #f56964;
+        background-color: #f56964;
+    }
+}
+
+.btn-link {
+    color: $color_primary;
+}

@@ -7,5 +7,6 @@
   "/assets/vue/backend/manifest.js": "/assets/vue/backend/manifest.js",
   "/assets/js/backend/app.js": "/assets/js/backend/app.js",
   "/assets/js/frontend/app.js": "/assets/js/frontend/app.js",
-  "/assets/css/backend/plugins.css": "/assets/css/backend/plugins.css"
+  "/assets/css/backend/plugins.css": "/assets/css/backend/plugins.css",
+  "/assets/css/frontend/plugins.css": "/assets/css/frontend/plugins.css"
 }

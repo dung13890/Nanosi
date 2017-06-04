@@ -37,7 +37,7 @@ class ProductRepositoryEloquent extends AbstractRepositoryEloquent implements Pr
             'src'=> 'required|image|mimes:jpeg,jpg,gif,bmp,png|max:1200',
         ],
     ];
-    
+
     public function model()
     {
         return new Product;
@@ -46,5 +46,9 @@ class ProductRepositoryEloquent extends AbstractRepositoryEloquent implements Pr
     public function getData($columns = ['*'])
     {
         return $this->model()->where('locked', true)->get($columns);
+    }
+
+    public function findBySlug($slug) {
+        return $this->model()->findBySlug($slug);
     }
 }

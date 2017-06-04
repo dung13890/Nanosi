@@ -38,6 +38,8 @@ trait UploadableTrait
         $storage = \Storage::disk($uploadDisk);
         if ($storage->has($destinationTarget)) {
             return $storage->delete($destinationTarget);
+        } else {
+            return;
         }
     }
 
@@ -62,6 +64,6 @@ trait UploadableTrait
         $name = str_slug(pathinfo($fileName, PATHINFO_FILENAME));
         $ext = pathinfo($fileName, PATHINFO_EXTENSION);
 
-        return $name . '.' . $ext; 
+        return $name . '.' . $ext;
     }
 }

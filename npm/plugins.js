@@ -13,6 +13,14 @@ var plugins = {
       out: 'jquery'
     },
     {
+      in: 'elevatezoom',
+      out: 'elevatezoom'
+    },
+    {
+      in: 'fancybox/dist',
+      out: 'fancybox'
+    },
+    {
       in: 'components-font-awesome/css',
       out: 'font-awesome/css'
     },

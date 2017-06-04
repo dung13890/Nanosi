@@ -16,16 +16,44 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        
         {{ HTML::style('vendor/bootstrap/css/bootstrap.min.css') }}
-        {{ HTML::style(mix('assets/css/frontend/app.css')) }}
+        {{ HTML::style('vendor/font-awesome/css/font-awesome.min.css') }}
+        {{ HTML::style(mix('assets/css/frontend/plugins.css')) }}
         @stack('prestyles')
+        {{ HTML::style(mix('assets/css/frontend/app.css')) }}
+        @stack('afterstyles')
     </head>
-    <body>
-        <div class="container">
-        @yield('page-content')
+    <body class="mg-boxed royal_loader">
+        <div class="page">
+            @include('frontend._partials.topbar')
+            @include('frontend._partials.header')
+            <div class="main-content">
+                <div class="container">
+                    @yield('page-content')
+                </div>
+            </div>
+            @include('frontend._partials.footer')
         </div>
         {{ HTML::script('vendor/jquery/jquery.min.js') }}
-        {{ HTML::script('vendor/bootstrap/js/bootstrap.min.js') }}
         @stack('prescripts')
+        {{ HTML::script('assets/js/frontend/app.js') }}
+        @stack('afterscripts')
+        <script>
+            (function($) {
+                "use strict";
+
+                Royal_Preloader.config({
+                    mode:           'logo',
+                    logo:           'assets/img/frontend/logo.png',
+                    timeout:        0,
+                    showInfo:       false,
+                    opacity:        1,
+                    background:     ['#fff']
+                });
+            })(jQuery);
+        </script>
     </body>
 </html>
