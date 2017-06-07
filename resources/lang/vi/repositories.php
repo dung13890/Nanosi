@@ -34,5 +34,7 @@ return [
     'category' => 'Category',
     'product' => 'Product',
     'menu' => 'Menu',
+    'slide' => 'Slide',
+    'config' => 'Config',
 
 ];

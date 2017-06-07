@@ -43,5 +43,9 @@ Route::group(['namespace' => 'Backend'], function () {
             'execpt' => ['create', 'edit', 'show', 'create']
         ]);
         Route::POST('menu/serialize', 'MenuController@serialize')->name('menu.serialize');
+        Route::resource('slide', 'SlideController');
+        Route::resource('config', 'ConfigController', [
+            'only' => ['index', 'store']
+        ]);
     });
 });

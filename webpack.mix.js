@@ -16,11 +16,11 @@ var config = require('./npm/config');
  | file for the application as well as bundling up all the JS files.
  |
  */
-del(config.plugins.bower.out);
-del(config.plugins.scripts.out);
-del(config.plugins.img.out);
-del(config.plugins.sass.out);
-del(config.plugins.styles.out);
+// del(config.plugins.bower.out);
+// del(config.plugins.scripts.out);
+// del(config.plugins.img.out);
+// del(config.plugins.sass.out);
+// del(config.plugins.styles.out);
 
 /*
  | Copy image to public

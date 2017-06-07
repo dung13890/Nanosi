@@ -19,6 +19,7 @@ class CreateSlidesTable extends Migration
             $table->string('introduce', 50);
             $table->string('url')->nullable();
             $table->string('image')->nullable();
+            $table->boolean('locked')->default(false);
             $table->timestamps();
         });
     }
