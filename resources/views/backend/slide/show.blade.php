@@ -8,6 +8,8 @@
 
             <ul class="nav nav-stacked nav-pills">
                 @include('backend.user._field', ['class' => 'fa-check-square-o', 'field' => $item->name])
+                @include('backend.user._field', ['class' => 'fa-check-square-o', 'field' => $item->introduce])
+                @include('backend.user._field', ['class' => 'fa-check-square-o', 'field' => $item->url])
                 <li>
                     <a href="javascript:void(0)">
                         <i class="fa @if (!$item->locked) fa-unlock @else fa-lock @endif  text-light-blue"></i>
@@ -15,7 +17,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('backend.page.edit', $item->id) }}">
+                    <a href="{{ route('backend.slide.edit', $item->id) }}">
                         <i class="fa fa-edit  text-light-blue"></i>
                         <span class="label label-primary">Edit</span>
                     </a>
@@ -37,9 +39,6 @@
                         {{ HTML::image(route('image', [ $item->image_default ]), 
                         '', ['class' => 'img-responsive']) }}
                         @endif
-                        <H4>{{ $item->description }}</H4>
-                        <hr>
-                        {!! $item->content !!}
                     </div>
                 </div>
             </div>

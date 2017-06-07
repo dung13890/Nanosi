@@ -16,6 +16,11 @@
                     <i class="fa fa-dashboard"></i> <span>{{ __('repositories.dashboard') }}</span>
                 </a>
             </li>
+            <li @if (Request::is('backend/slide*')) class="active" @endif">
+                <a href="{{ route('backend.slide.index') }}">
+                    <i class="fa fa-file-image-o"></i> <span>{{ __('repositories.slide') }}</span>
+                </a>
+            </li>
             <li @if (Request::is('backend/page*')) class="active" @endif">
                 <a href="{{ route('backend.page.index') }}">
                     <i class="fa fa-file-text-o"></i> <span>{{ __('repositories.page') }}</span>
@@ -48,6 +53,11 @@
             <li @if (Request::is('backend/menu*')) class="active" @endif">
                 <a href="{{ route('backend.menu.index') }}">
                     <i class="fa fa-list-ul"></i> <span>{{ __('repositories.menu') }}</span>
+                </a>
+            </li>
+            <li @if (Request::is('backend/config*')) class="active" @endif">
+                <a href="{{ route('backend.config.index') }}">
+                    <i class="fa fa-wrench"></i> <span>{{ __('repositories.config') }}</span>
                 </a>
             </li>
         </ul>

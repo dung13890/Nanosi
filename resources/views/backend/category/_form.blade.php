@@ -26,7 +26,7 @@
 </div>
 
 <div class="form-group">
-{{ Form::label('name', 'Banner', ['class' => 'control-label']) }}
+{{ Form::label('slide', 'Banner', ['class' => 'control-label']) }}
 @include('backend._partials.includes.banner', ['imageName' => 'image'])
 </div>
 @component('backend._partials.components.submit')
