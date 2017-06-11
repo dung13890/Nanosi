@@ -16,13 +16,13 @@ class CategoryController extends FrontendController
     public function show($slug)
     {
         $this->compacts['item'] = $this->repository->findBySlug($slug);
-    	$this->compacts['heading'] = $this->compacts['item']->name;
-    	$this->compacts['description'] = str_limit($this->compacts['item']->description, 156);
-        
+        $this->compacts['heading'] = $this->compacts['item']->name;
+        $this->compacts['description'] = str_limit($this->compacts['item']->description, 156);
+
         $this->compacts['products'] = $this->compacts['item']->products()->paginate(12, $this->dataProduct);
 
         $this->view = 'shop.category';
 
-    	return $this->viewRender();
+        return $this->viewRender();
     }
 }
